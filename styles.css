@@ -1,0 +1,420 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+/* universal  */
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ /* tamaño de fuente global */
+html{
+    font-size: 62.5%;
+}
+/* font del body */
+body{
+    font-family: "Rubik";
+}
+/* main container */
+.container{
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    margin-bottom: 8rem;
+
+}
+/* ***************************** */
+/*           TOP BAR             */
+/* ***************************** */
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #101010;
+   /* side bar relation */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 30rem);/* navbar al 100% menos 30rem o 300px de la sidebar */
+}
+/* arrows */
+.container-arrows{
+    display: flex;
+    gap: 3rem;
+}
+
+.container-arrow-left,
+.container-arrow-right {
+    background-color: #101010;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-arrow-left i,
+.container-arrow-right i{
+font-size: 2.4rem;
+}
+/* hover pointer */
+.container-arrow-left i,
+.container-arrow-right i:hover{
+cursor: pointer;
+}
+/* buttons register and login */
+.buttons-user{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.btn-register{
+    color: #a7a7a7;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.btn-register:hover{
+    color: #fff;
+    transform: scale(1.05);/* escala para que se haga un poco mas grande */
+}
+.btn-login{
+    color: rgb(20, 20, 20);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.btn-login:hover{ 
+    transform: scale(1.05);
+    box-shadow: 0 0 5rem #05ee94;
+}
+
+.btn-full{
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/* ***************************** */
+/*            Sidebar            */
+/* ***************************** */
+.navbar {
+	background-color: #000;
+	color: #b3b3b3;
+	padding-top: 2.4rem;
+
+	grid-row: 1/3;
+	grid-column: 1/2;
+
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+
+	position: fixed;
+	width: 30rem;
+	height: calc(100vh - 8rem);
+}
+/* logo */
+.logo-svg {
+	
+	width: 18rem;
+	padding: 0 2.4rem;
+}
+/* <!-- links principales  inicio buscar biblioteca */
+.nav-main {
+	padding: 0 2.4rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.nav-main li {
+	list-style: none;
+}
+/* enlaces del li */
+.nav-main li a {
+	text-decoration: none;
+	font-size: 1.6rem;
+	color: #b3b3b3;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2rem;
+	font-weight: 600;
+	text-overflow: ellipsis;
+	transition: all 0.3s ease;
+}
+
+.nav-main li a:hover{
+    color: #fff;
+}
+/* tamaño de iconos */
+.nav-main li a i{
+   font-size: 2rem;
+} 
+/* botones extras  div*/
+.extra-options{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    padding: 0 2.4rem;
+    margin-top: 1.5rem;
+    flex: 1;
+}
+/* buttons crear lista y favoritos */
+.extra-options button {
+border: none;
+outline: none;
+border-radius: 5px;
+background: transparent;
+color: #b3b3b3;
+text-align: left;
+font-size: 1.6rem;
+font-weight: 500;
+
+display: flex;
+gap: 1.6rem;
+cursor: pointer;
+transition: all .3s ease;
+}
+
+.extra-options button i{
+    font-size: 2rem;
+}
+.extra-options button:hover{
+    color: #fff;
+}
+
+.container-links{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.5rem;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+/* boton lenguage */
+.btn-language{
+    border: 1ps solid #727272;
+    background: none;
+    color: #fff;
+    padding: 1rem;
+    width: 18rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.btn-language:hover{
+    transform: scale(1.08);
+   
+}
+/* icono btn language */
+.btn-language i{
+    font-size: 2rem;
+}
+/* links legal */
+.container-links-legal{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.container-links-legal a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #b3b3b3;
+}
+
+/* ***************************** */
+/*         MAIN CONTENT          */
+/* ***************************** */
+
+.main-content{
+    grid-row: 1/3; /* de la fila 1 a la fila 3 */
+    grid-column: 2/-1;/*  de la columna 2 hasta el final */
+
+    background-color:#121212;
+    padding: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+     gap: 3rem;
+}
+
+.title-playlist{
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 5rem;
+}
+.title-playlist:hover{
+    text-decoration: underline;
+}
+.container-name-concentracion,
+.container-name-spotify-playlists{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+/* card containers */
+.container-card-concentracion,
+.container-card-spotify-playlists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr));
+    gap: 2.4rem;
+}
+/* cards */
+.card-concentracion,
+.card-spotify-playlist{
+background-color: #181818;
+border-radius: .5rem;
+padding: 1.6rem;
+box-shadow:  0 0 2rem rgba(0,0,0,.2);
+transition: background-color .3s ease;
+cursor: pointer;
+position: relative;
+
+}
+.card-concentracion:hover,
+.card-spotify-playlist:hover{
+    background-color: #13eeb77c;
+}
+/* cards img */
+.card-img img {
+	width: 100%;
+	border-radius: 0.5rem;
+}
+card-img{
+    overflow: hidden;
+}
+.card h2{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+}
+.card p{
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* ***************************** */
+/*           Footer              */
+/* ***************************** */
+
+.footer{
+    grid-row: 3/4;
+    grid-column: 2/-1;
+    color: #fff;
+    background-color:#121212 ;
+    padding: 6rem 4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.container-links-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #2a2a2a;
+}
+.links-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.6rem;
+}
+.links-footer a{
+    text-decoration: none;
+    color: #a7a7a7;
+}
+
+.links-footer a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+.social-icons{
+    display: flex;
+    gap: 2rem;
+}
+.container-icon{
+    color: #fff;
+    background-color: #292929;
+    border-radius: 50%;
+    width: 4.2rem;
+    height: 4.2rem;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.container-icon:hover{
+    background-color: #727272;
+}
+.container-icon i{
+    font-size: 1.7rem;
+}
+
+.copyright{
+    color: #a7a7a7;
+    font-size: 1.6rem;
+}
+/* ***************************** */
+/*         Banner Final          */
+/* ***************************** */
+
+.banner-bottom{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 1rem 2rem;
+background-image: linear-gradient(90deg,#af1896,#589bf5);
+position: fixed;
+bottom: 0;
+z-index: 20;
+width: 100%;
+height: 8rem;
+
+}
+
+.banner-bottom .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.banner-bottom .content span{
+    font-style: italic;
+    text-transform: uppercase;
+    color: #fff;
+}
+.banner-bottom .content p{
+    color: #fff;
+}
